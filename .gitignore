@@ -1,0 +1,37 @@
+# Binários gerados
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# Diretórios de build
+/bin/
+/build/
+/dist/
+
+# Pastas do sistema e IDEs
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Arquivos de cache do Go
+**/vendor/
+/go.sum
+
+# Arquivos de banco local (caso use SQLite futuramente)
+*.db
+
+# Logs
+*.log
+
+# Configurações sensíveis
+.env
+.env.*
+
+ 
+
+ 

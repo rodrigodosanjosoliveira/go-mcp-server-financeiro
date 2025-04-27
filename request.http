@@ -1,0 +1,34 @@
+### 1. Registrar ferramenta financeira
+
+POST http://localhost:8080/register-financial-tool
+Content-Type: application/json
+
+{
+  "name": "Consulta Ações",
+  "description": "Consulta cotações de ações em tempo real",
+  "endpoint": "https://www.alphavantage.co/query",
+  "service_type": "cotacao"
+}
+
+---
+
+### 2. Listar ferramentas financeiras
+
+GET http://localhost:8080/list-financial-tools
+Accept: application/json
+
+---
+
+### 3. Consultar preço de uma ação (Alpha Vantage)
+
+POST http://localhost:8080/query-stock-price
+Content-Type: application/json
+
+{
+  "symbol": "AAPL"
+}
+
+### 4. Consultar metadados do MCP Server
+
+GET http://localhost:8080/metadata
+Accept: application/json
