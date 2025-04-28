@@ -6,9 +6,16 @@ import (
 	"io"
 	"net/http"
 	"os"
+
+	"github.com/joho/godotenv"
 )
 
-var alphaVantageAPIKey = os.Getenv("ALPHA_VANTAGE_API_KEY")
+var alphaVantageAPIKey string
+
+func init() {
+	godotenv.Load()
+	alphaVantageAPIKey = os.Getenv("ALPHA_VANTAGE_API_KEY")
+}
 
 func QueryStockPriceHandler(w http.ResponseWriter, r *http.Request) {
 	type Request struct {
